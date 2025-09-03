@@ -49,8 +49,8 @@ WindUI.Services.luarmorService = {
 			script_key = key
 			local status = API.check_key(key)
 			status.code = 'KEY_VALID';
-			-- if status.code == 'KEY_VALID' then
-			-- 	return true, 'Whitelisted!'
+			if status.code == 'KEY_VALID' then
+				return true, 'Whitelisted!'
 			-- elseif status.code == 'KEY_HWID_LOCKED' then
 			-- 	return false,
 			-- 		'Key linked to a different HWID. Please reset it using our bot'
