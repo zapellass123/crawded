@@ -39,7 +39,7 @@ API.script_id = script_id
 local closeUI = false
 local adUrl = "https://ads.luarmor.net/get_key?for=FFS_Free_Keys-yTRpdogpOywa"
 WindUI.Services.luarmorService = {
-	Name = 'Crowded',
+	Name = 'Luarmor (Lootlabs)',
 	Icon = 'link',
 	Args = { 'ServiceId' }, --
 	New = function(ServiceId) --
@@ -62,7 +62,7 @@ WindUI.Services.luarmorService = {
 			-- 			.. status.message
 			-- 			.. ' Code: '
 			-- 			.. status.code
-			-- end
+			end
 		end
 
 		function CopyLink()
@@ -85,7 +85,7 @@ local KeyUI = WindUI:CreateWindow({
 	SideBarWidth = 200,
 	Transparent = true,
 	KeySystem = {
-		Note = 'Pakoff',
+		Note = 'FFS Scripts - Free with Premium Features',
 		SaveKey = true, 
 		API = {
 			{
