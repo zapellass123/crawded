@@ -85,7 +85,7 @@ local KeyUI = WindUI:CreateWindow({
 	SideBarWidth = 200,
 	Transparent = true,
 	KeySystem = {
-		Note = 'FFS Scripts - Free with Premium Features',
+		Note = 'Pakoff',
 		SaveKey = true, 
 		API = {
 			{
