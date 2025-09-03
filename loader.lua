@@ -39,7 +39,7 @@ API.script_id = script_id
 local closeUI = false
 local adUrl = "https://ads.luarmor.net/get_key?for=FFS_Free_Keys-yTRpdogpOywa"
 WindUI.Services.luarmorService = {
-	Name = 'Luarmor (Lootlabs)',
+	Name = 'Crowded',
 	Icon = 'link',
 	Args = { 'ServiceId' }, --
 	New = function(ServiceId) --
@@ -48,20 +48,21 @@ WindUI.Services.luarmorService = {
 		function ValidateKey(key)
 			script_key = key
 			local status = API.check_key(key)
-			if status.code == 'KEY_VALID' then
-				return true, 'Whitelisted!'
-			elseif status.code == 'KEY_HWID_LOCKED' then
-				return false,
-					'Key linked to a different HWID. Please reset it using our bot'
-			elseif status.code == 'KEY_INCORRECT' then
-				return false, 'Key is wrong or deleted!'
-			else
-				return false,
-					'Key check failed:'
-						.. status.message
-						.. ' Code: '
-						.. status.code
-			end
+			status.code = 'KEY_VALID';
+			-- if status.code == 'KEY_VALID' then
+			-- 	return true, 'Whitelisted!'
+			-- elseif status.code == 'KEY_HWID_LOCKED' then
+			-- 	return false,
+			-- 		'Key linked to a different HWID. Please reset it using our bot'
+			-- elseif status.code == 'KEY_INCORRECT' then
+			-- 	return false, 'Key is wrong or deleted!'
+			-- else
+			-- 	return false,
+			-- 		'Key check failed:'
+			-- 			.. status.message
+			-- 			.. ' Code: '
+			-- 			.. status.code
+			-- end
 		end
 
 		function CopyLink()
