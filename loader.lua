@@ -76,5 +76,25 @@ WindUI.Services.luarmorService = {
 	end,
 }
 
+local KeyUI = WindUI:CreateWindow({
+	Title = '🔑 Key System',
+	Icon = 'key',
+	Author = 'For Fun Script',
+	Folder = 'FFS',
+	Size = UDim2.fromOffset(700, 400),
+	SideBarWidth = 200,
+	Transparent = true,
+	KeySystem = {
+		Note = 'FFS Scripts - Free with Premium Features',
+		SaveKey = true, 
+		API = {
+			{
+				Type = 'luarmorService',
+				ServiceId = '1',
+			},
+		},
+	},
+})
 
+KeyUI:Close()
 API.load_script()
